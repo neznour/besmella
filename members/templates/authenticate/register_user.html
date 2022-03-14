@@ -16,7 +16,7 @@
     
         
             <form action="{% url 'register_user' %}" method="POST">
-                {% csrf_token %} 
+              {% csrf_token %} 
          
                  {{ form.as_p }} 
                    
