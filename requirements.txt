@@ -74,7 +74,7 @@ importlib-metadata @ file:///C:/ci/importlib-metadata_1593446511143/work
 intervaltree @ file:///tmp/build/80754af9/intervaltree_1594361675072/work
 ipykernel @ file:///C:/ci/ipykernel_1594745408489/work/dist/ipykernel-5.3.2-py3-none-any.whl
 ipython @ file:///C:/ci/ipython_1593447482397/work
-ipython-genutils==0.2.0
+ipython_genutils==0.2.0
 ipywidgets==7.5.1
 isort==4.3.21
 itsdangerous==1.1.0
@@ -181,7 +181,7 @@ reportlab==3.6.2
 requests @ file:///tmp/build/80754af9/requests_1592841827918/work
 rope==0.17.0
 Rtree==0.9.4
-ruamel-yaml==0.15.87
+ruamel_yaml==0.15.87
 scikit-image==0.16.2
 scikit-learn @ file:///C:/ci/scikit-learn_1592853510272/work
 scipy @ file:///C:/ci/scipy_1592916963468/work
@@ -223,7 +223,7 @@ typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1592847887441/w
 ujson==1.35
 unicodecsv==0.14.1
 urllib3==1.25.9
-
+watchdog @ file:///C:/ci/watchdog_1593447437088/work
 wcwidth @ file:///tmp/build/80754af9/wcwidth_1593447189090/work
 webencodings==0.5.1
 Werkzeug==1.0.1
