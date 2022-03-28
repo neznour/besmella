@@ -232,16 +232,16 @@ def home(request, year=datetime.now().year, month=datetime.now().strftime('%B'))
         year,
 		
          month_number)
-	#create current year
-		now = datetime.now()
-		current_year = now.year
-		event_list = Event.objects.filter(
-			event_date__year = year,
-			event_date__month = month_number
-			)
+#create current year
+    now = datetime.now()
+    current_year = now.year
+    event_list = Event.objects.filter(
+		event_date__year = year,
+		event_date__month = month_number
+		)
 
-		#Get current time
-		time = now.strftime('%I:%M %p')
+    #Get current time
+    time = now.strftime('%I:%M %p')
 
     return render(request, 'events/home.html', {
         "now": now,
