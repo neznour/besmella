@@ -45,8 +45,6 @@ def event_text(request):
     response.writelines(lines)
     return response
 
-    
-
 def pray_time(request):    
     
     
@@ -234,18 +232,18 @@ def home(request, year=datetime.now().year, month=datetime.now().strftime('%B'))
         year,
 		
          month_number)
-#create current year
-    now = datetime.now()
-    current_year = now.year
-    event_list = Event.objects.filter(
-		event_date__year = year,
-		event_date__month = month_number
-		)
+	#create current year
+		now = datetime.now()
+		current_year = now.year
+		event_list = Event.objects.filter(
+			event_date__year = year,
+			event_date__month = month_number
+			)
 
-    #Get current time
-    time = now.strftime('%I:%M %p')
+		#Get current time
+		time = now.strftime('%I:%M %p')
 
-    return render(request, 'events/home.html',{
+    return render(request, 'events/home.html', {
         "now": now,
 		"year":year,
         "month":month,
@@ -253,6 +251,6 @@ def home(request, year=datetime.now().year, month=datetime.now().strftime('%B'))
         "cal":cal,
         "current_year":current_year,
         "time":time,
-		 "event_list": event_list
+		"event_list": event_list
     })
     
