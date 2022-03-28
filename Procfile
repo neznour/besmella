@@ -1,1 +1,1 @@
-web: gunicorn panah.wsji
+web: gunicorn panah.wsgi
