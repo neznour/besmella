@@ -221,7 +221,7 @@ def donation(request):
 
 
 def home(request, year=datetime.now().year, month=datetime.now().strftime('%B')):
-	name = "John"
+	name = "ER"
 	month = month.capitalize()
 	# Convert month from name to number
 	month_number = list(calendar.month_name).index(month)
