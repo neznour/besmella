@@ -244,7 +244,7 @@ def home(request, year=datetime.now().year, month=datetime.now().strftime('%B'))
 	# Get current time
 	time = now.strftime('%I:%M %p')
 	return render(request, 
-		'events/home.html', {
+		'events/event_list', {
 		"name": name,
 		"year": year,
 		"month": month,
