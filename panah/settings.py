@@ -1,7 +1,5 @@
-
-
-from pathlib import Path
 import os 
+from pathlib import Path
 import django_heroku
 import dj_database_url
 from decouple import config
@@ -18,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zupo^lzx1rffo+ud^_qgo5=aui@vv_q&g(kq@)_=)pc#-@knb*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -78,8 +76,7 @@ DATABASES = {
     }
 }
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -113,6 +110,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
