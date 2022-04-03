@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import django_heroku
 import dj_database_url
-from decouple import Config
+from decouple import config
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -77,7 +77,6 @@ DATABASES = {
 }
 
 
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -127,7 +126,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
-STATIC_ROOT=os.path.join(BASE_DIR,"/static/")
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+
 
 django_heroku.settings(locals())
